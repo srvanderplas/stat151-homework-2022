@@ -5,7 +5,7 @@ date: "Due: February 4, 2022"
 output: html_document
 ---
 
-[Download the starter qmd file here](srvanderplas.github.io/stat151-homework/2-finding-your-way.qmd)
+[Download the starter qmd file here](2-finding-your-way.qmd)
 
 ## MadLibs
 ### Running a Python Script at the command line

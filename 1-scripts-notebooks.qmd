@@ -1,0 +1,21 @@
+---
+title: "Homework 1: Scripts and Notebooks"
+author: "Your Name"
+date: "Due: January 28, 2022"
+output: html_document
+---
+
+[Download the starter qmd file here](srvanderplas.github.io/stat151-homework/1-scripts-notebooks.qmd)
+
+## What is the difference between a script and a notebook?
+
+Replace this text with 2-3 sentences describing your understanding of the difference between a script and a notebook. Use markdown formatting as described in [this cheat-sheet](https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf).
+
+
+## Playing with Code in Notebooks
+
+
+
+```{r}
+1 + 1
+```

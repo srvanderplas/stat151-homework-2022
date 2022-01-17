@@ -14,8 +14,46 @@ Replace this text with 2-3 sentences describing your understanding of the differ
 
 ## Playing with Code in Notebooks
 
-
+There is code in the [textbook](https://srvanderplas.github.io/Stat151/markdown.html) defining a logarithmic (or Archimedean) spiral. Using [this reference](https://mathworld.wolfram.com/ArchimedeanSpiral.html), modify the code so that it now plots Fermat's spiral. Use $a = 1$.
 
 ```{r}
-1 + 1
+# Define the angle of the spiral (polar coords)
+# go around two full times (2*pi = one revolution)
+theta <- seq(0, 4*pi, .01) 
+# Define the distance from the origin of the spiral
+# Needs to have the same length as theta
+r <- seq(0, 5, length.out = length(theta))
+
+# Now define x and y in cartesian coordinates
+x <- r * cos(theta)
+y <- r * sin(theta)
+
+plot(x, y, type = "l")
+```
+
+Can you do the same thing in Python? It may help to know that in Python, to raise something to a power, you use `**` instead of `^`. 
+
+
+```{python}
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Define the angle of the spiral (polar coords)
+# go around two full times (2*pi = one revolution)
+theta = np.arange(0, 4 * np.pi, 0.01)
+# Define the distance from the origin of the spiral
+# Needs to have the same length as theta 
+# (get length of theta with theta.size, 
+#  and then divide 5 by that to get the increment)
+r = np.arange(0, 5, 5/theta.size)
+
+# Now define x and y in cartesian coordinates
+x = r * np.cos(theta)
+y = r * np.sin(theta)
+
+# Define the axes
+fig, ax = plt.subplots()
+# Plot the line
+ax.plot(x, y)
+plt.show()
 ```

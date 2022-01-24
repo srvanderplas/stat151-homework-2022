@@ -1,0 +1,46 @@
+---
+title: "Homework 3: Basic Data Types"
+author: "Your Name"
+date: "Due: February 11, 2022"
+output: html_document
+---
+
+[Download the starter qmd file here](3-data-types.qmd)
+
+## Pythagorean Theorem in R
+
+$$a^2 + b^2 = c^2$$
+
+Use the chunk below to define variables $a$, $b$, and $c$, where you set $a$ and $b$ and $c$ is determined mathematically. You may need to find the square root function in R to make this work.
+
+```{r pythagorean-theorem-r}
+
+```
+
+
+## Quadratic Formula in Python
+
+$$x = -b \pm \frac{\sqrt{b^2 - 4ac}}{2a}$$
+
+
+Use the chunk below to define variables $a$, $b$, and $c$, and then define $x1$ and $x2$, the possible values for $x$.
+
+```{python quad-formula-py}
+
+```
+
+
+
+## Debugging practice
+
+Look at the data frame below, which contains 3 columns: `Name`, `Salary`, and `Hire.Year`. You've read in this data from the 
+
+
+```{r}
+salary <- read.table("3-data.tsv", sep = "\t", header = T)
+
+salary
+```
+
+
+

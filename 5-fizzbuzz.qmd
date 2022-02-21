@@ -1,0 +1,56 @@
+---
+title: "Homework 5: FizzBuzz"
+author: "Your Name"
+date: "Due: February 25, 2022"
+format:
+  html:
+    theme: default
+---
+
+[Download the starter qmd file here](5-fizzbuzz.qmd)
+
+
+## FizzBuzz
+
+The "FizzBuzz Test" is a famous programming interview question. 
+> Write a program that prints the numbers from 1 to 30. But for multiples of three print “Fizz” instead of the number and for the multiples of five print “Buzz”. For numbers which are multiples of both three and five print “FizzBuzz"
+
+
+### Program Flow Map
+
+Create a program flow map (on paper, or using an online tool of your choice, such as Excalidraw) showing how FizzBuzz should be evaluated for a given integer x. You do not need to worry about the for loop in this program flow map.
+
+Can you think of another way to solve FizzBuzz using a different logical structure? What do you need to know how to do in R/python for each solution? Do you need to know how to concatenate strings? Convert something from an integer to a string? Just output stuff to the command line? Thinking through these requirements can help you decide which solution is the simplest and/or best.
+
+
+### R Code
+
+In the R chunk below, write code which will solve this problem using a for loop that goes from 1 to 30.
+
+```{r fizzbuzz-logic}
+
+```
+
+
+Each logical comparison can take some time to evaluate. How many logical comparisons are evaluated in your for loop? Can you count them up? For instance, if your if-elseif-else statement is TRUE on the first if statement, then the second logical comparison is not evaluated, but if it is FALSE for the first comparison, then the second comparison does get evaluated. Thinking about efficiency is one way to evaluate whether code is well-written or not.
+
+Number of logical comparisons:
+
+### Python Code
+
+In the python chunk below, write code which will solve this problem using a for loop that goes from 1 to 30, using the same logic that you used in the R chunk above.
+
+```{python same-logic-as-r}
+
+
+```
+
+
+Challenge: Can you use string concatenation to produce a solution that has only 3 single if statements (that is, one that doesn't use nested if statements or an if-else construction)? This may be different from the way you constructed your R solution, and that's good - there are many ways to solve this problem.
+
+```{python string-concatenation-logic}
+
+```
+
+
+Which set of Python code do you think is better? You can consider both machine efficiency (e.g. number of comparisons/operations evaluated) and maintainability (how easy it is to read, understand, and modify the code). 

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang=""><head>
+  <meta charset="utf-8">
+  <meta name="generator" content="quarto-0.2.232">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <meta name="author" content="Your Name">
+  <title>Homework 5: FizzBuzz</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+  <script src="5-fizzbuzz_files/libs/clipboard/clipboard.min.js"></script>
+  <script src="5-fizzbuzz_files/libs/quarto-html/quarto.js"></script>
+  <script src="5-fizzbuzz_files/libs/quarto-html/popper.min.js"></script>
+  <script src="5-fizzbuzz_files/libs/quarto-html/tippy.umd.min.js"></script>
+  <script src="5-fizzbuzz_files/libs/quarto-html/anchor.min.js"></script>
+  <link href="5-fizzbuzz_files/libs/quarto-html/tippy.css" rel="stylesheet">
+  <link href="5-fizzbuzz_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet">
+  <script src="5-fizzbuzz_files/libs/bootstrap/bootstrap.min.js"></script>
+  <link href="5-fizzbuzz_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+  <link href="5-fizzbuzz_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div id="quarto-content" class="container-fluid page-layout-article">
+<div class="row">
+<div class="col mx-auto col-sm-12 col-md-9 col-lg-7">
+<main>
+<header id="title-block-header">
+<h1 class="title display-7">Homework 5: FizzBuzz</h1>
+<p class="author">Your Name</p>
+<p class="date">Due: February 25, 2022</p>
+</header>
+<p><a href="5-fizzbuzz.qmd">Download the starter qmd file here</a></p>
+<section id="fizzbuzz" class="level2">
+<h2 class="anchored" data-anchor-id="fizzbuzz">FizzBuzz</h2>
+<p>The “FizzBuzz Test” is a famous programming interview question. &gt; Write a program that prints the numbers from 1 to 30. But for multiples of three print “Fizz” instead of the number and for the multiples of five print “Buzz”. For numbers which are multiples of both three and five print “FizzBuzz”</p>
+<section id="program-flow-map" class="level3">
+<h3 class="anchored" data-anchor-id="program-flow-map">Program Flow Map</h3>
+<p>Create a program flow map (on paper, or using an online tool of your choice, such as Excalidraw) showing how FizzBuzz should be evaluated for a given integer x. You do not need to worry about the for loop in this program flow map.</p>
+<p>Can you think of another way to solve FizzBuzz using a different logical structure? What do you need to know how to do in R/python for each solution? Do you need to know how to concatenate strings? Convert something from an integer to a string? Just output stuff to the command line? Thinking through these requirements can help you decide which solution is the simplest and/or best.</p>
+</section>
+<section id="r-code" class="level3">
+<h3 class="anchored" data-anchor-id="r-code">R Code</h3>
+<p>In the R chunk below, write code which will solve this problem using a for loop that goes from 1 to 30.</p>
+<div class="cell">
+
+</div>
+<p>Each logical comparison can take some time to evaluate. How many logical comparisons are evaluated in your for loop? Can you count them up? For instance, if your if-elseif-else statement is TRUE on the first if statement, then the second logical comparison is not evaluated, but if it is FALSE for the first comparison, then the second comparison does get evaluated. Thinking about efficiency is one way to evaluate whether code is well-written or not.</p>
+<p>Number of logical comparisons:</p>
+</section>
+<section id="python-code" class="level3">
+<h3 class="anchored" data-anchor-id="python-code">Python Code</h3>
+<p>In the python chunk below, write code which will solve this problem using a for loop that goes from 1 to 30, using the same logic that you used in the R chunk above.</p>
+<div class="cell">
+
+</div>
+<p>Challenge: Can you use string concatenation to produce a solution that has only 3 single if statements (that is, one that doesn’t use nested if statements or an if-else construction)? This may be different from the way you constructed your R solution, and that’s good - there are many ways to solve this problem.</p>
+<div class="cell">
+
+</div>
+<p>Which set of Python code do you think is better? You can consider both machine efficiency (e.g.&nbsp;number of comparisons/operations evaluated) and maintainability (how easy it is to read, understand, and modify the code).</p>
+</section>
+</section>
+<script type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    setTimeout(function() {
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    window.tippy(el, {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    }); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</main>
+</div> <!-- /main column -->
+</div> <!-- /row -->
+</div> <!-- /container fluid -->
+
+
+</body></html>

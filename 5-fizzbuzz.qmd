@@ -22,7 +22,9 @@ Create a program flow map (on paper, or using an online tool of your choice, suc
 
 ![Substitute picture of a cat](https://i.imgur.com/Ejx14pT.jpeg)
 
-Can you think of another way to solve FizzBuzz using a different logical structure? What do you need to know how to do in R/python for each solution? Do you need to know how to concatenate strings? Convert something from an integer to a string? Just output stuff to the command line? Thinking through these requirements can help you decide which solution is the simplest and/or best.
+Can you think of another way to solve FizzBuzz using a different logical structure? What do you need to know how to do in R/python for each solution? Do you need to know how to concatenate strings? Convert something from an integer to a string? Just output stuff to the command line? Thinking through these requirements can help you decide which solution is the simplest and/or best. 
+
+List out the requirements of the solution in your program flow map here:
 
 
 ### R Code
@@ -30,6 +32,7 @@ Can you think of another way to solve FizzBuzz using a different logical structu
 In the R chunk below, write code which will solve this problem using a for loop that goes from 1 to 30.
 
 ```{r fizzbuzz-logic}
+# R code goes here
 
 ```
 
@@ -38,12 +41,13 @@ Each logical comparison can take some time to evaluate. How many logical compari
 
 Number of logical comparisons:
 
+
 ### Python Code
 
 In the python chunk below, write code which will solve this problem using a for loop that goes from 1 to 30, using the same logic that you used in the R chunk above.
 
 ```{python same-logic-as-r}
-
+# Python code goes here
 
 ```
 
@@ -51,8 +55,11 @@ In the python chunk below, write code which will solve this problem using a for 
 Challenge: Can you use string concatenation to produce a solution that has only 3 single if statements (that is, one that doesn't use nested if statements or an if-else construction)? This may be different from the way you constructed your R solution, and that's good - there are many ways to solve this problem.
 
 ```{python string-concatenation-logic}
+# Additional python code goes here
 
 ```
 
 
-Which set of Python code do you think is better? You can consider both machine efficiency (e.g. number of comparisons/operations evaluated) and maintainability (how easy it is to read, understand, and modify the code). 
+> Which set of Python code do you think is better? You can consider both machine efficiency (e.g. number of comparisons/operations evaluated) and maintainability (how easy it is to read, understand, and modify the code). 
+
+Write a response here

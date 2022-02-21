@@ -18,7 +18,9 @@ The "FizzBuzz Test" is a famous programming interview question.
 
 ### Program Flow Map
 
-Create a program flow map (on paper, or using an online tool of your choice, such as Excalidraw) showing how FizzBuzz should be evaluated for a given integer x. You do not need to worry about the for loop in this program flow map.
+Create a program flow map (on paper, or using an online tool of your choice, such as Excalidraw) showing how FizzBuzz should be evaluated for a given integer x. You do not need to worry about the for loop in this program flow map. Upload your program flow map image to imgur.com and provide an image link here using markdown image syntax. You will need to link directly to the image (with image file extension) - right click on your uploaded image and choose 'copy image address' to get the proper link.
+
+![Substitute picture of a cat](https://i.imgur.com/Ejx14pT.jpeg)
 
 Can you think of another way to solve FizzBuzz using a different logical structure? What do you need to know how to do in R/python for each solution? Do you need to know how to concatenate strings? Convert something from an integer to a string? Just output stuff to the command line? Thinking through these requirements can help you decide which solution is the simplest and/or best.
 

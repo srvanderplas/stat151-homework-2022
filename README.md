@@ -10,3 +10,5 @@ Stat 151 Homework Assignments
 - HW 4: [Vectors](https://srvanderplas.github.io/stat151-homework/4-vectors.html) [(Starter file)](https://raw.githubusercontent.com/srvanderplas/stat151-homework/main/4-vectors.qmd)
 
 - HW 5: [FizzBuzz](https://srvanderplas.github.io/stat151-homework/5-fizzbuzz.html) [(Starter file)](https://raw.githubusercontent.com/srvanderplas/stat151-homework/main/5-fizzbuzz.qmd)
+
+- HW 6: [Data Frames](https://srvanderplas.github.io/stat151-homework/6-data-frames.html) [(Starter file)](https://raw.githubusercontent.com/srvanderplas/stat151-homework/main/6-data-frames.qmd)

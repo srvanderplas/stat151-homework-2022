@@ -69,7 +69,7 @@ Make a list of steps that will be necessary to get the data you have into this f
 
 
 #### Problem Code
-Provide code that sequentially works through your list of steps to produce the graph.
+Provide code that sequentially works through your list of steps to produce the graph. You might put your steps as comments to remind yourself what you're doing at each point in the code. 
 
 ```{r}
 # Code for step 1 goes here

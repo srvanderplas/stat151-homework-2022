@@ -1,5 +1,6 @@
 ---
 title: "Exam 1"
+author: "Your Name"
 format:
   html:
     theme: default
@@ -64,7 +65,7 @@ A data frame with 62466 rows and 11 variables
 
 The code below provides an example of how to create a summary dataset and handle NAs in R and python.
 
-```{r example-summary-dataset}
+```{r example-summary-dataset-r}
 # Create sample data
 df <- data.frame(x = c(rnorm(100, 10), rnorm(100, 20)),
                  y = rep(c("Group 1", "Group 2"), each = 100))
@@ -81,11 +82,11 @@ for (i in unique(df$y)) {
 df_means
 
 # Demonstration of na.rm
-mean(c(NA, 1, 2, 3), na.rm = F) # Don't remove NAs
 mean(c(NA, 1, 2, 3), na.rm = T) # Remove NAs
+mean(c(NA, 1, 2, 3), na.rm = F) # Don't remove NAs
 ```
 
-```{python example-summary-dataset}
+```{python example-summary-dataset-py}
 import pandas as pd
 import numpy as np
 

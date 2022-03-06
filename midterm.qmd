@@ -1,0 +1,101 @@
+---
+title: "Exam 1"
+format:
+  html:
+    theme: default
+---
+
+## Instructions
+
+You may use either R or Python for this exam. 
+Completing the exam in both languages will earn you 20% extra credit on the exam and will also prove that you're kicking butt in this class.
+
+
+1. Create a folder for this exam on your computer. 
+
+2. Save this file into that folder. 
+
+3. When you are finished with the exam, compile the document. Make sure all of your code runs!
+
+4. Upload a zip file of your work and any necessary file dependencies to Canvas.
+
+
+## Dataset
+
+The data for this exam are taken from the `happy` dataset in the `classdata` R package. I've exported the data to CSV for you at this link:
+
+### Description
+The data is a small sample of variables related to happiness from the general social survey (GSS). The GSS is a yearly cross-sectional survey of Americans, run since 1972. We combine data for more than 25 years to yield over 60 thousand observations, and of the over 5,000 variables, we select some variables that are related to happiness:
+
+### Format
+A data frame with 62466 rows and 11 variables
+
+### Details
+
+- year. year of the response, 1972 to 2018.
+
+- age. age in years: 18–89 (89 stands for all 89 year olds and older).
+
+- degree. highest education: lt high school, high school, junior college, bachelor, graduate.
+
+- finrela. how is your financial status compared to others: far below, below average, average, above average, far above.
+
+- happy. happiness: very happy, pretty happy, not too happy.
+
+- health. health: excellent, good, fair, poor.
+
+- marital. marital status: married, never married, divorced, widowed, separated.
+
+- sex. sex: female, male.
+
+- polviews. from extremely conservative to extremely liberal.
+
+- partyid. party identification: strong republican, not str republican, ind near rep, independent, ind near dem, not str democrat, strong democrat, other party.
+
+- wtssall. probability weight. 0.39–8.74
+
+## Tasks
+
+1. Read in the data and create a data frame that you will work with for this exam.
+
+2. Create a new column variable, `decade`, in your data frame. You will need to take the response year and truncate it to the decade, so that 1972 becomes 1970 and 1989 becomes 1980. You can use a series of logical statements if you want, but it may be more effective to find a numerical function or functions that will perform the operation you want. `floor()` and `math.floor()` in R and python respectively are good places to start.
+
+3. Create a new data set by iterating through each year to find the proportion of people who are very happy. Use a for loop. Using your new data frame, plot the proportion of very happy people over time. Note: You may have to pass an argument to R or use a function in python to tell it to exclude missing values from the calculation, such as `na.rm` or `.na.drop()`. 
+
+The code below provides an example of how to create a summary dataset in R and python.
+```{r example-summary-dataset}
+# Create sample data
+df <- data.frame(x = rnorm(100, 10))
+
+# Create a new data frame
+happy_age <- data.frame(year = NULL, n_values = NULL)
+
+# For each age, how many values?
+for (i in unique(happy$age)) {
+  sub_happy <- subset(happy, age == i)
+  happy_age <- rbind(happy_age, c(age = i, n_values = nrow(sub_happy)))
+}
+
+```
+
+```{python example-summary-dataset}
+import pandas as pd
+
+# Create a new data frame
+happy_age <- dataF
+
+# For each age, how many values?
+for (i in unique(happy$age)) {
+  sub_happy <- filter(happy, age == i)
+  happy_age <- bind_rows(happy_age, c(age = i, n_values = nrow(sub_happy)))
+}
+
+```
+
+
+```{r}
+happy %>%
+  mutate(decade = floor(year/10)*10) %>%
+  group_by(decade) %>%
+  summarize(veryhappy = mean(happy == "very happy", na.rm = T))
+```

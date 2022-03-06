@@ -58,11 +58,12 @@ A data frame with 62466 rows and 11 variables
 
 1. Read in the data and create a data frame that you will work with for this exam.
 
-2. Create a new column variable, `decade`, in your data frame. You will need to take the response year and truncate it to the decade, so that 1972 becomes 1970 and 1989 becomes 1980. You can use a series of logical statements if you want, but it may be more effective to find a numerical function or functions that will perform the operation you want. `floor()` and `math.floor()` in R and python respectively are good places to start.
+2. Create a new column variable, `decade`, in your data frame. You will need to take the response year and truncate it to the decade, so that 1972 becomes 1970 and 1989 becomes 1980. You can use a series of logical statements if you want, but it may be more effective to find a numerical function or functions that will perform the operation you want. `floor()` and `math.floor()` in R and python respectively are good places to start. Create a scatterplot (use `geom_point`) of your happy year vs decade to show that your approach succeeded.
 
-3. Create a new data set by iterating through each year to find the proportion of people who are very happy. Use a for loop. Using your new data frame, plot the proportion of very happy people over time. Note: You may have to pass an argument to R or use a function in python to tell it to exclude missing values from the calculation, such as `na.rm` or `.na.drop()`. 
+3. Create a new data set by iterating through each year to find the proportion of people who are very happy. Use a for loop. Using your new data frame, plot the proportion of very happy people over time. Note: You may have to pass an argument to the mean function to tell it to exclude missing values from the calculation, such as `na.rm` or `skipna`. Or, you can remove the NAs from happy using a function like `na.omit` or `dropna`, but be careful to only drop rows with an NA in variables we care about, like `happy` or `year`.
 
 The code below provides an example of how to create a summary dataset and handle NAs in R and python.
+
 ```{r example-summary-dataset}
 # Create sample data
 df <- data.frame(x = c(rnorm(100, 10), rnorm(100, 20)),
@@ -112,3 +113,8 @@ for i in np.unique(df.y):
 pd.DataFrame({'y':[1, 2, 3, np.nan]}).y.mean(skipna = True)
 pd.DataFrame({'y':[1, 2, 3, np.nan]}).y.mean(skipna = False)
 ```
+
+
+# Solutions
+
+Copy the list of tasks here and put your code for each task below the task description. Your code should be well commented. If you cannot figure out how to do a task, provide a list of steps that you think are necessary to accomplish that task and provide as much detail in terms of how you would accomplish that in code as possible. If your code does not compile, add `, error = T` to the chunk header so that the rest of the document will still compile. 

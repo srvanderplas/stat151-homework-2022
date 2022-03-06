@@ -22,7 +22,7 @@ Completing the exam in both languages will earn you 20% extra credit on the exam
 
 ## Dataset
 
-The data for this exam are taken from the `happy` dataset in the `classdata` R package. I've exported the data to CSV for you at this link:
+The data for this exam are taken from the `happy` dataset in the `classdata` R package. I've exported the data to CSV for you at this link: https://raw.githubusercontent.com/srvanderplas/stat151-homework/main/happy.csv
 
 ### Description
 The data is a small sample of variables related to happiness from the general social survey (GSS). The GSS is a yearly cross-sectional survey of Americans, run since 1972. We combine data for more than 25 years to yield over 60 thousand observations, and of the over 5,000 variables, we select some variables that are related to happiness:
@@ -62,40 +62,53 @@ A data frame with 62466 rows and 11 variables
 
 3. Create a new data set by iterating through each year to find the proportion of people who are very happy. Use a for loop. Using your new data frame, plot the proportion of very happy people over time. Note: You may have to pass an argument to R or use a function in python to tell it to exclude missing values from the calculation, such as `na.rm` or `.na.drop()`. 
 
-The code below provides an example of how to create a summary dataset in R and python.
+The code below provides an example of how to create a summary dataset and handle NAs in R and python.
 ```{r example-summary-dataset}
 # Create sample data
-df <- data.frame(x = rnorm(100, 10))
+df <- data.frame(x = c(rnorm(100, 10), rnorm(100, 20)),
+                 y = rep(c("Group 1", "Group 2"), each = 100))
 
-# Create a new data frame
-happy_age <- data.frame(year = NULL, n_values = NULL)
+df_means <- data.frame(y = NULL, mean = NULL)
 
-# For each age, how many values?
-for (i in unique(happy$age)) {
-  sub_happy <- subset(happy, age == i)
-  happy_age <- rbind(happy_age, c(age = i, n_values = nrow(sub_happy)))
+# For each y group, what is the mean of x?
+for (i in unique(df$y)) {
+  sub_df <- subset(df, y == i)
+  df_means <- rbind(df_means, 
+                    data.frame(y = i, mean = mean(sub_df$x, na.rm = T)))
 }
 
+df_means
+
+# Demonstration of na.rm
+mean(c(NA, 1, 2, 3), na.rm = F) # Don't remove NAs
+mean(c(NA, 1, 2, 3), na.rm = T) # Remove NAs
 ```
 
 ```{python example-summary-dataset}
 import pandas as pd
+import numpy as np
 
 # Create a new data frame
-happy_age <- dataF
+df = pd.DataFrame({
+  'y': np.repeat(['Group1', 'Group2'], (100, 100)), 
+  'x': np.concatenate((np.random.normal(loc = 10, size = 100), np.random.normal(loc = 12, size = 100)), axis = None)
+  })
+
+# Create an empty dataframe
+df_means = pd.DataFrame(columns = ['y', 'mean'])
 
 # For each age, how many values?
-for (i in unique(happy$age)) {
-  sub_happy <- filter(happy, age == i)
-  happy_age <- bind_rows(happy_age, c(age = i, n_values = nrow(sub_happy)))
-}
+for i in np.unique(df.y):
+  # Create the subset
+  df_sub = df.loc[df.y == i]
+  # Drop NAs from the data frame
+  # This step isn't necessary because mean() uses skipna = T by default
+  # df_sub = df_sub.dropna(subset = ['x', 'y']) 
+  # Add a new row to the end of df_means
+  df_means.loc[len(df_means.index)] = [i, df_sub.x.mean()]
 
-```
 
-
-```{r}
-happy %>%
-  mutate(decade = floor(year/10)*10) %>%
-  group_by(decade) %>%
-  summarize(veryhappy = mean(happy == "very happy", na.rm = T))
+# Demonstrating skipna parameter of mean
+pd.DataFrame({'y':[1, 2, 3, np.nan]}).y.mean(skipna = True)
+pd.DataFrame({'y':[1, 2, 3, np.nan]}).y.mean(skipna = False)
 ```

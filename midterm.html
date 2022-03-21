@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang=""><head>
+  <meta charset="utf-8">
+  <meta name="generator" content="quarto-0.2.275">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <meta name="author" content="Your Name">
+  <title>Exam 1</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+  <script src="midterm_files/libs/clipboard/clipboard.min.js"></script>
+  <script src="midterm_files/libs/quarto-html/quarto.js"></script>
+  <script src="midterm_files/libs/quarto-html/popper.min.js"></script>
+  <script src="midterm_files/libs/quarto-html/tippy.umd.min.js"></script>
+  <script src="midterm_files/libs/quarto-html/anchor.min.js"></script>
+  <link href="midterm_files/libs/quarto-html/tippy.css" rel="stylesheet">
+  <link href="midterm_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet">
+  <script src="midterm_files/libs/bootstrap/bootstrap.min.js"></script>
+  <link href="midterm_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+  <link href="midterm_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div id="quarto-content" class="container-fluid page-layout-article">
+<div class="page-columns">
+<main class="content">
+<header id="title-block-header">
+<h1 class="title display-7">Exam 1</h1>
+<p class="author">Your Name</p>
+</header>
+<section id="instructions" class="level2">
+<h2 class="anchored" data-anchor-id="instructions">Instructions</h2>
+<p>You may use either R or Python for this exam. Completing the exam in both languages will earn you 20% extra credit on the exam and will also prove that you’re kicking butt in this class.</p>
+<ol type="1">
+<li><p>Create a folder for this exam on your computer.</p></li>
+<li><p>Save this file into that folder.</p></li>
+<li><p>When you are finished with the exam, compile the document. Make sure all of your code runs!</p></li>
+<li><p>Upload a zip file of your work and any necessary file dependencies to Canvas.</p></li>
+</ol>
+</section>
+<section id="dataset" class="level2">
+<h2 class="anchored" data-anchor-id="dataset">Dataset</h2>
+<p>The data for this exam are taken from the <code>happy</code> dataset in the <code>classdata</code> R package. I’ve exported the data to CSV for you at this link: https://raw.githubusercontent.com/srvanderplas/stat151-homework/main/happy.csv</p>
+<section id="description" class="level3">
+<h3 class="anchored" data-anchor-id="description">Description</h3>
+<p>The data is a small sample of variables related to happiness from the general social survey (GSS). The GSS is a yearly cross-sectional survey of Americans, run since 1972. We combine data for more than 25 years to yield over 60 thousand observations, and of the over 5,000 variables, we select some variables that are related to happiness:</p>
+</section>
+<section id="format" class="level3">
+<h3 class="anchored" data-anchor-id="format">Format</h3>
+<p>A data frame with 62466 rows and 11 variables</p>
+</section>
+<section id="details" class="level3">
+<h3 class="anchored" data-anchor-id="details">Details</h3>
+<ul>
+<li><p>year. year of the response, 1972 to 2018.</p></li>
+<li><p>age. age in years: 18–89 (89 stands for all 89 year olds and older).</p></li>
+<li><p>degree. highest education: lt high school, high school, junior college, bachelor, graduate.</p></li>
+<li><p>finrela. how is your financial status compared to others: far below, below average, average, above average, far above.</p></li>
+<li><p>happy. happiness: very happy, pretty happy, not too happy.</p></li>
+<li><p>health. health: excellent, good, fair, poor.</p></li>
+<li><p>marital. marital status: married, never married, divorced, widowed, separated.</p></li>
+<li><p>sex. sex: female, male.</p></li>
+<li><p>polviews. from extremely conservative to extremely liberal.</p></li>
+<li><p>partyid. party identification: strong republican, not str republican, ind near rep, independent, ind near dem, not str democrat, strong democrat, other party.</p></li>
+<li><p>wtssall. probability weight. 0.39–8.74</p></li>
+</ul>
+</section>
+</section>
+<section id="tasks" class="level2">
+<h2 class="anchored" data-anchor-id="tasks">Tasks</h2>
+<ol type="1">
+<li><p>Read in the data and create a data frame that you will work with for this exam.</p></li>
+<li><p>Create a new column variable, <code>decade</code>, in your data frame. You will need to take the response year and truncate it to the decade, so that 1972 becomes 1970 and 1989 becomes 1980. You can use a series of logical statements if you want, but it may be more effective to find a numerical function or functions that will perform the operation you want. <code>floor()</code> and <code>math.floor()</code> in R and python respectively are good places to start. Create a scatterplot (use <code>geom_point</code>) of your happy year vs decade to show that your approach succeeded.</p></li>
+<li><p>Create a new data set by iterating through each year to find the proportion of people who are very happy. Use a for loop. Using your new data frame, plot the proportion of very happy people over time. Note: You may have to pass an argument to the mean function to tell it to exclude missing values from the calculation, such as <code>na.rm</code> or <code>skipna</code>. Or, you can remove the NAs from happy using a function like <code>na.omit</code> or <code>dropna</code>, but be careful to only drop rows with an NA in variables we care about, like <code>happy</code> or <code>year</code>.</p></li>
+</ol>
+<p>The code below provides an example of how to create a summary dataset and handle NAs in R and python.</p>
+<div class="cell">
+<div class="sourceCode" id="cb1"><pre class="sourceCode r cell-code code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create sample data</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="fu">rnorm</span>(<span class="dv">100</span>, <span class="dv">10</span>), <span class="fu">rnorm</span>(<span class="dv">100</span>, <span class="dv">20</span>)),</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>                 <span class="at">y =</span> <span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">"Group 1"</span>, <span class="st">"Group 2"</span>), <span class="at">each =</span> <span class="dv">100</span>))</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>df_means <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">y =</span> <span class="cn">NULL</span>, <span class="at">mean =</span> <span class="cn">NULL</span>)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co"># For each y group, what is the mean of x?</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="fu">unique</span>(df<span class="sc">$</span>y)) {</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  sub_df <span class="ot">&lt;-</span> <span class="fu">subset</span>(df, y <span class="sc">==</span> i)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  df_means <span class="ot">&lt;-</span> <span class="fu">rbind</span>(df_means, </span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>                    <span class="fu">data.frame</span>(<span class="at">y =</span> i, <span class="at">mean =</span> <span class="fu">mean</span>(sub_df<span class="sc">$</span>x, <span class="at">na.rm =</span> T)))</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>df_means</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-stdout">
+<pre><code>        y      mean
+1 Group 1  9.943409
+2 Group 2 20.190308</code></pre>
+</div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r cell-code code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Demonstration of na.rm</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(<span class="fu">c</span>(<span class="cn">NA</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>), <span class="at">na.rm =</span> T) <span class="co"># Remove NAs</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-stdout">
+<pre><code>[1] 2</code></pre>
+</div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r cell-code code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(<span class="fu">c</span>(<span class="cn">NA</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>), <span class="at">na.rm =</span> F) <span class="co"># Don't remove NAs</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-stdout">
+<pre><code>[1] NA</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode" id="cb7"><pre class="sourceCode python cell-code code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a new data frame</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.DataFrame({</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>  <span class="st">'y'</span>: np.repeat([<span class="st">'Group1'</span>, <span class="st">'Group2'</span>], (<span class="dv">100</span>, <span class="dv">100</span>)), </span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>  <span class="st">'x'</span>: np.concatenate((np.random.normal(loc <span class="op">=</span> <span class="dv">10</span>, size <span class="op">=</span> <span class="dv">100</span>), np.random.normal(loc <span class="op">=</span> <span class="dv">12</span>, size <span class="op">=</span> <span class="dv">100</span>)), axis <span class="op">=</span> <span class="va">None</span>)</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>  })</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Create an empty dataframe</span></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>df_means <span class="op">=</span> pd.DataFrame(columns <span class="op">=</span> [<span class="st">'y'</span>, <span class="st">'mean'</span>])</span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a><span class="co"># For each age, how many values?</span></span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> np.unique(df.y):</span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Create the subset</span></span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>  df_sub <span class="op">=</span> df.loc[df.y <span class="op">==</span> i]</span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Drop NAs from the data frame</span></span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>  <span class="co"># This step isn't necessary because mean() uses skipna = T by default</span></span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>  <span class="co"># df_sub = df_sub.dropna(subset = ['x', 'y']) </span></span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Add a new row to the end of df_means</span></span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a>  df_means.loc[<span class="bu">len</span>(df_means.index)] <span class="op">=</span> [i, df_sub.x.mean()]</span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a><span class="co"># Demonstrating skipna parameter of mean</span></span>
+<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a>pd.DataFrame({<span class="st">'y'</span>:[<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, np.nan]}).y.mean(skipna <span class="op">=</span> <span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-stdout">
+<pre><code>2.0</code></pre>
+</div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode python cell-code code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>pd.DataFrame({<span class="st">'y'</span>:[<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, np.nan]}).y.mean(skipna <span class="op">=</span> <span class="va">False</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-stdout">
+<pre><code>nan</code></pre>
+</div>
+</div>
+</section>
+<section id="solutions" class="level1">
+<h1>Solutions</h1>
+<p>Copy the list of tasks here and put your code for each task below the task description. Your code should be well commented. If you cannot figure out how to do a task, provide a list of steps that you think are necessary to accomplish that task and provide as much detail in terms of how you would accomplish that in code as possible. If your code does not compile, add <code>, error = T</code> to the chunk header so that the rest of the document will still compile.</p>
+</section>
+<script type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    setTimeout(function() {
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</main>
+<!-- /main column -->
+</div> <!-- /row -->
+</div> <!-- /container fluid -->
+
+
+</body></html>

@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+  <meta charset="utf-8">
+  <meta name="generator" content="quarto-0.9.88">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <meta name="author" content="Key">
+  <title>Homework 7: Data Transformations</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+
+  <script src="7-data-transformations-solution_files/libs/clipboard/clipboard.min.js"></script>
+  <script src="7-data-transformations-solution_files/libs/quarto-html/quarto.js"></script>
+  <script src="7-data-transformations-solution_files/libs/quarto-html/popper.min.js"></script>
+  <script src="7-data-transformations-solution_files/libs/quarto-html/tippy.umd.min.js"></script>
+  <script src="7-data-transformations-solution_files/libs/quarto-html/anchor.min.js"></script>
+  <link href="7-data-transformations-solution_files/libs/quarto-html/tippy.css" rel="stylesheet">
+  <link href="7-data-transformations-solution_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet">
+  <script src="7-data-transformations-solution_files/libs/bootstrap/bootstrap.min.js"></script>
+  <link href="7-data-transformations-solution_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+  <link href="7-data-transformations-solution_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body class="fullcontent">
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+<header id="title-block-header" class="quarto-title-block default">
+
+
+<div class="quarto-title"><h1 class="title display-7">Homework 7: Data Transformations</h1></div><div class="quarto-title-meta"><div><div class="quarto-title-meta-heading">Author</div><div class="quarto-title-meta-contents"><div class="quarto-title-authors"><p>Key</p></div></div></div></div></header>
+<p>This week’s assignment uses data from Tidy Tuesday (<a href="https://github.com/rfordatascience/tidytuesday/tree/2e9bd5a67e09b14d01f616b00f7f7e0931515d24/data/2020/2020-02-18">link</a>) and relates to food consumption and CO2 emissions.</p>
+<p>The code above reads the data in from the <a href="https://www.nu3.de/blogs/nutrition/food-carbon-footprint-index-2018">original webpage</a> and gets it into tabular form.</p>
+<p>Your job is to complete the following tasks:</p>
+<ol type="1">
+<li>Describe the state of the data set, <code>table_content</code>.
+<ul>
+<li>What are the variables in the data set?
+<ul>
+<li>Country</li>
+<li>Food</li>
+<li>Consumption</li>
+<li>Carbon Output</li>
+</ul></li>
+<li>Is it in tidy form? What principles of tidy data does this violate?<br>
+No.&nbsp;Each variable does not have its own column (food is spread out over multiple columns). Each observation does not have its own row (multiple observations are in a single row).</li>
+<li>What steps do you need to take to get it into tidy form?
+<ol type="1">
+<li>Convert to ultra-long format so that each food type has its own row (consumption and carbon output will be together in a single column)</li>
+<li>Split food type from unit so that they are in separate columns.</li>
+<li>Convert to wider format, separating consumption from carbon output so that each is in its own column.</li>
+</ol></li>
+</ul></li>
+<li>Sketch out what the final (tidy) data set will look like. You can use markdown table syntax or a picture here, but if you use a picture, upload it to imgur and include the image link in this document USING PROPER MARKDOWN SYNTAX.</li>
+</ol>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Country</th>
+<th>Food</th>
+<th>Consumption</th>
+<th>Carbon</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Argentina</td>
+<td>Pork</td>
+<td>10.51</td>
+<td>37.20</td>
+</tr>
+<tr class="even">
+<td>Australia</td>
+<td>Pork</td>
+<td>24.14</td>
+<td>85.44</td>
+</tr>
+<tr class="odd">
+<td>…</td>
+<td>…</td>
+<td>…</td>
+<td>…</td>
+</tr>
+<tr class="even">
+<td>Argentina</td>
+<td>Chicken</td>
+<td>38.66</td>
+<td>41.53</td>
+</tr>
+<tr class="odd">
+<td>Australia</td>
+<td>Chicken</td>
+<td>46.12</td>
+<td>49.54</td>
+</tr>
+<tr class="even">
+<td>…</td>
+<td>…</td>
+<td>…</td>
+<td>…</td>
+</tr>
+</tbody>
+</table>
+<ol start="3" type="1">
+<li>Write R or python code for each step in the process you identified in #1. Show what the data looks like at each step using <code>head()</code>. Each step should be in a different code chunk.</li>
+</ol>
+<p>Convert to ultra-long format so that each food type has its own row</p>
+<div class="cell">
+<div class="sourceCode" id="cb1"><pre class="sourceCode r cell-code code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyr)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>step1 <span class="ot">&lt;-</span> table_content <span class="sc">%&gt;%</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="sc">-</span>Country, <span class="at">names_to =</span> <span class="st">"variable"</span>, <span class="at">values_to =</span> <span class="st">"value"</span>)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(step1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-stdout">
+<pre><code># A tibble: 6 × 3
+  Country   variable                                           value
+  &lt;chr&gt;     &lt;chr&gt;                                              &lt;dbl&gt;
+1 Argentina Pork;Supplied for Consumption (kg/person/year)      10.5
+2 Argentina Pork;Kg CO2/person/year                             37.2
+3 Argentina Poultry;Supplied for Consumption (kg/person/year)   38.7
+4 Argentina Poultry;Kg CO2/person/year                          41.5
+5 Argentina Beef;Supplied for Consumption (kg/person/year)      55.5
+6 Argentina Beef;Kg CO2/person/year                           1712  </code></pre>
+</div>
+</div>
+<p>Split food type from unit so that they are in separate columns.</p>
+<div class="cell">
+<div class="sourceCode" id="cb3"><pre class="sourceCode r cell-code code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>step2 <span class="ot">&lt;-</span> step1 <span class="sc">%&gt;%</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">separate</span>(variable, <span class="at">into =</span> <span class="fu">c</span>(<span class="st">"Food"</span>, <span class="st">"Unit"</span>), <span class="at">sep =</span> <span class="st">";"</span>)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(step2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-stdout">
+<pre><code># A tibble: 6 × 4
+  Country   Food    Unit                                       value
+  &lt;chr&gt;     &lt;chr&gt;   &lt;chr&gt;                                      &lt;dbl&gt;
+1 Argentina Pork    Supplied for Consumption (kg/person/year)   10.5
+2 Argentina Pork    Kg CO2/person/year                          37.2
+3 Argentina Poultry Supplied for Consumption (kg/person/year)   38.7
+4 Argentina Poultry Kg CO2/person/year                          41.5
+5 Argentina Beef    Supplied for Consumption (kg/person/year)   55.5
+6 Argentina Beef    Kg CO2/person/year                        1712  </code></pre>
+</div>
+</div>
+<p>Convert to wider format, separating consumption from carbon output so that each is in its own column.</p>
+<div class="cell">
+<div class="sourceCode" id="cb5"><pre class="sourceCode r cell-code code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>step3 <span class="ot">&lt;-</span> step2 <span class="sc">%&gt;%</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> Unit, <span class="at">values_from =</span> value)</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(step3) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-stdout">
+<pre><code># A tibble: 6 × 4
+  Country   Food        `Supplied for Consumption (kg/person/…` `Kg CO2/person…`
+  &lt;chr&gt;     &lt;chr&gt;                                         &lt;dbl&gt;            &lt;dbl&gt;
+1 Argentina Pork                                          10.5             37.2 
+2 Argentina Poultry                                       38.7             41.5 
+3 Argentina Beef                                          55.5           1712   
+4 Argentina Lamb &amp; Goat                                    1.56            54.6 
+5 Argentina Fish                                           4.36             6.96
+6 Argentina Eggs                                          11.4             10.5 </code></pre>
+</div>
+</div>
+<p>Clean up names</p>
+<div class="cell">
+<div class="sourceCode" id="cb7"><pre class="sourceCode r cell-code code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>step4 <span class="ot">&lt;-</span> step3 <span class="sc">%&gt;%</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">Consumption =</span> <span class="st">`</span><span class="at">Supplied for Consumption (kg/person/year)</span><span class="st">`</span>, <span class="at">Carbon =</span> <span class="st">`</span><span class="at">Kg CO2/person/year</span><span class="st">`</span>)</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(step4)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-stdout">
+<pre><code># A tibble: 6 × 4
+  Country   Food        Consumption  Carbon
+  &lt;chr&gt;     &lt;chr&gt;             &lt;dbl&gt;   &lt;dbl&gt;
+1 Argentina Pork              10.5    37.2 
+2 Argentina Poultry           38.7    41.5 
+3 Argentina Beef              55.5  1712   
+4 Argentina Lamb &amp; Goat        1.56   54.6 
+5 Argentina Fish               4.36    6.96
+6 Argentina Eggs              11.4    10.5 </code></pre>
+</div>
+</div>
+<ol start="4" type="1">
+<li>For each food type (you may have to remove total values), plot the relationship between Carbon output and Consumption (use facets to get separate plots for each type of food). What do you notice for each plot? If you want to reduce carbon emissions, what foods should you eat less of?</li>
+</ol>
+<div class="cell">
+<div class="sourceCode" id="cb9"><pre class="sourceCode r cell-code code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>step4 <span class="sc">%&gt;%</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">grepl</span>(<span class="st">"total"</span>, Food)) <span class="sc">%&gt;%</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> Consumption, <span class="at">y =</span> Carbon, <span class="at">color =</span> Food)) <span class="sc">+</span> <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="fu">facet_wrap</span>(<span class="sc">~</span>Food)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="7-data-transformations-solution_files/figure-html/unnamed-chunk-12-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>The data shows that the consumption of beef/lamb/goats is associated with significantly higher carbon output per capita, so eating less of those products would produce lower overall carbon emissions.</p>
+<ol start="5" type="1">
+<li>Look at the plot above again. Do you have any concerns about the data? The data source?</li>
+</ol>
+<p>The points are all in a straight line. This suggests that the data we have been working with are not collected observations (there would be random noise) but rather calculated based on a constant rate of emissions per unit of consumption. Reading the information at the original website (https://www.nu3.de/blogs/nutrition/food-carbon-footprint-index-2018), we can see that the data source is promoting veganism and is calculating carbon footprint per capita for each food type based on the amount consumed in the country and the country’s total CO2 produced. This is ridiculous for a number of reasons - global trade among them - but it also neglects different agricultural practices that may exist in raising e.g.&nbsp;corn-fed beef vs.&nbsp;grass-fed beef, manufacturing that is a driver of CO2 emissions unrelated to agriculture, and many other factors.</p>
+</main>
+<!-- /main column -->
+<script type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    setTimeout(function() {
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+</body></html>

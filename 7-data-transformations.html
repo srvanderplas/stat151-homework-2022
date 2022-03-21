@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+  <meta charset="utf-8">
+  <meta name="generator" content="quarto-0.9.88">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <meta name="author" content="Your Name">
+  <title>Homework 7: Data Transformations</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+
+  <script src="7-data-transformations_files/libs/clipboard/clipboard.min.js"></script>
+  <script src="7-data-transformations_files/libs/quarto-html/quarto.js"></script>
+  <script src="7-data-transformations_files/libs/quarto-html/popper.min.js"></script>
+  <script src="7-data-transformations_files/libs/quarto-html/tippy.umd.min.js"></script>
+  <script src="7-data-transformations_files/libs/quarto-html/anchor.min.js"></script>
+  <link href="7-data-transformations_files/libs/quarto-html/tippy.css" rel="stylesheet">
+  <link href="7-data-transformations_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet">
+  <script src="7-data-transformations_files/libs/bootstrap/bootstrap.min.js"></script>
+  <link href="7-data-transformations_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+  <link href="7-data-transformations_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body class="fullcontent">
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+<header id="title-block-header" class="quarto-title-block default">
+
+
+<div class="quarto-title"><h1 class="title display-7">Homework 7: Data Transformations</h1></div><div class="quarto-title-meta"><div><div class="quarto-title-meta-heading">Author</div><div class="quarto-title-meta-contents"><div class="quarto-title-authors"><p>Your Name</p></div></div></div></div></header>
+<p>This week’s assignment uses data from Tidy Tuesday (<a href="https://github.com/rfordatascience/tidytuesday/tree/2e9bd5a67e09b14d01f616b00f7f7e0931515d24/data/2020/2020-02-18">link</a>) and relates to food consumption and CO2 emissions.</p>
+<p>The code above reads the data in from the <a href="https://www.nu3.de/blogs/nutrition/food-carbon-footprint-index-2018">original webpage</a> and gets it into tabular form.</p>
+<p>Your job is to complete the following tasks:</p>
+<ol type="1">
+<li><p>Describe the state of the data set, <code>table_content</code>.</p>
+<ul>
+<li>What are the variables in the data set?
+<ul>
+<li>var1</li>
+<li>var2</li>
+<li>(add more as necessary)</li>
+</ul></li>
+<li>Is it in tidy form? What principles of tidy data does this violate?<br>
+Your answer here</li>
+<li>What steps do you need to take to get it into tidy form?
+<ol type="1">
+<li></li>
+<li>(add more steps as necessary)</li>
+</ol></li>
+</ul></li>
+<li><p>Sketch out what the final (tidy) data set will look like. You can use markdown table syntax or a picture here, but if you use a picture, upload it to imgur and include the image link in this document USING PROPER MARKDOWN SYNTAX.</p></li>
+<li><p>Write R or python code for each step in the process you identified in #1. Show what the data looks like at each step using <code>head()</code>. Each step should be in a different code chunk.</p></li>
+<li><p>For each food type (you may have to remove total values), plot the relationship between Carbon output and Consumption (use facets to get separate plots for each type of food). What do you notice for each plot? If you want to reduce carbon emissions, what foods should you eat less of?</p></li>
+<li><p>Look at the plot above again. Do you have any concerns about the data? The data source?</p></li>
+</ol>
+</main>
+<!-- /main column -->
+<script type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    setTimeout(function() {
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+</body></html>

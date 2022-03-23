@@ -6,7 +6,7 @@ format: html
 
 This week's assignment uses data from Tidy Tuesday ([link](https://github.com/rfordatascience/tidytuesday/tree/2e9bd5a67e09b14d01f616b00f7f7e0931515d24/data/2020/2020-02-18)) and relates to food consumption and CO2 emissions. 
 
-```{r data-code, include = F}
+```{r data-code, echo = T, message = F, warning = F}
 # Credit to Kasia and minorly edited to create output file and test plot
 # Blog post at https://r-tastic.co.uk/post/from-messy-to-tidy/
 library(rvest)

@@ -16,3 +16,5 @@ Stat 151 Homework Assignments
 - [Midterm](https://srvanderplas.github.io/stat151-homework/midterm.html) [(Starter file)](https://raw.githubusercontent.com/srvanderplas/stat151-homework/main/midterm.qmd)
 
 - HW 7: [Data Transformations](https://srvanderplas.github.io/stat151-homework/7-data-transformations.html) [(Starter file)](https://raw.githubusercontent.com/srvanderplas/stat151-homework/main/7-data-transformations.qmd)
+
+- HW 8: [Table Joins](https://srvanderplas.github.io/stat151-homework/8-table-joins.html) [(Starter file)](https://raw.githubusercontent.com/srvanderplas/stat151-homework/main/8-table-joins.qmd)

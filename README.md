@@ -18,3 +18,5 @@ Stat 151 Homework Assignments
 - HW 7: [Data Transformations](https://srvanderplas.github.io/stat151-homework/7-data-transformations.html) [(Starter file)](https://raw.githubusercontent.com/srvanderplas/stat151-homework/main/7-data-transformations.qmd)
 
 - HW 8: [Table Joins](https://srvanderplas.github.io/stat151-homework/8-table-joins.html) [(Starter file)](https://raw.githubusercontent.com/srvanderplas/stat151-homework/main/8-table-joins.qmd)
+
+- HW 9: [Functions](https://srvanderplas.github.io/stat151-homework/9-functions.html) [(Starter file)](https://raw.githubusercontent.com/srvanderplas/stat151-homework/main/9-functions.qmd)

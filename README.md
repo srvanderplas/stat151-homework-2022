@@ -20,3 +20,6 @@ Stat 151 Homework Assignments
 - HW 8: [Table Joins](https://srvanderplas.github.io/stat151-homework/8-table-joins.html) [(Starter file)](https://raw.githubusercontent.com/srvanderplas/stat151-homework/main/8-table-joins.qmd)
 
 - HW 9: [Functions](https://srvanderplas.github.io/stat151-homework/9-functions.html) [(Starter file)](https://raw.githubusercontent.com/srvanderplas/stat151-homework/main/9-functions.qmd)
+
+
+- HW 10: [Graphics](https://srvanderplas.github.io/stat151-homework/10-graphics.html) [(Starter file)](https://raw.githubusercontent.com/srvanderplas/stat151-homework/main/10-graphics.qmd)

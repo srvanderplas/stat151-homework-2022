@@ -4,7 +4,16 @@ author: "Your Name"
 format: html
 ---
 
+```{r setup, include = F}
+# This chunk sets some options for the file compilation
+knitr::opts_chunk$set(collapse = T, message = F, warning = F, error = T)
+```
+
 For each of these problems, you may choose to solve the problem in either R or python.
+
+Your submitted qmd file must compile without errors (5 points). Use `error=TRUE` in a chunk if it is supposed to return an error (for instance, if you are demonstrating error handling). 
+
+You may use the textbook, your notes, and google on this exam, but you may not post this exam and ask for help on any site, and you must be able to explain how any code you submit on this exam works. It is ok to google, for instance, how to convert a string to a list of characters, but it is not ok to google how to solve the entire question. Please ask if you are concerned about any possible edge cases.
 
 ## Scrabble!
 

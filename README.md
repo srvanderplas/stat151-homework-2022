@@ -23,3 +23,6 @@ Stat 151 Homework Assignments
 
 
 - HW 10: [Graphics](https://srvanderplas.github.io/stat151-homework/10-graphics.html) [(Starter file)](https://raw.githubusercontent.com/srvanderplas/stat151-homework/main/10-graphics.qmd)
+
+
+- [Final](https://srvanderplas.github.io/stat151-homework/final.html) [(Starter file)](https://raw.githubusercontent.com/srvanderplas/stat151-homework/main/final.qmd)

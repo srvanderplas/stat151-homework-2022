@@ -12,7 +12,7 @@ ha
 haji
 into
 raj
-fa
+_a
 fab
 bird
 zine
@@ -33,7 +33,7 @@ retime
 xi
 at
 ti
-outraged
+outr_ged
 tegu
 ergotic
 yea
@@ -45,8 +45,8 @@ teasel
 meant
 zone
 jolt
-titrable
-waffler
+titr_ble
+w_ffler
 zoned
 draw
 probing

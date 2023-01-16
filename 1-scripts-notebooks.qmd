@@ -9,7 +9,7 @@ output: html_document
 
 ## What is the difference between a script and a notebook?
 
-Replace this text with 2-3 sentences describing your understanding of the difference between a script and a notebook. Use markdown formatting as described in [this cheat-sheet](https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf).
+Replace this text with 2-3 sentences describing your understanding of the difference between a script and a notebook. Your answer should be applicable to R or python (so if you discuss python notebooks, you should also discuss the equivalent in R). Use markdown formatting as described in [this cheat-sheet](https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf). You may want to provide a table or itemized list, and you should use code formatting to indicate file extensions and programming languages.
 
 
 ## Playing with Code in Notebooks
